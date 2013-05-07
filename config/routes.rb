@@ -1,4 +1,10 @@
 IntroRubySession4::Application.routes.draw do
+  root :to => "pages#home"
+  match 'about' => 'pages#about'
+
+  resources :users
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
