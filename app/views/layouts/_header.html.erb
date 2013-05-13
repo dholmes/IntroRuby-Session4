@@ -3,9 +3,9 @@
     <div class="container">
       <a class="brand" href="#">Easy Meetings</a>
       <div class="nav-collapse">
-        <ul class="nav">
-          <li<%= active_page(root_path) %>><%= link_to "Home", root_path %></li>
-          <li<%= active_page(about_path) %>><%= link_to "About", about_path %></li>
+        <ul class="nav pull-right" style="display:inline-block" >
+          <li <%= active_page(root_path) %>><%= link_to "Home", root_path %></li>
+         <li <%= active_page(about_path) %>><%= link_to "About", about_path %></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
