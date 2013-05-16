@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     @users = User.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { redirect_to root_path }# index.html.erb
       format.json { render json: @users }
     end
   end
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         
-        format.html { redirect_to @user, flash: {success:"Account Created!!  WOOT!!"} }
+        format.html { redirect_to root_path, flash: {success:"Account Created!!  WOOT!!"} }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
