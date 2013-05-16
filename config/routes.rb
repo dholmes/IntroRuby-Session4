@@ -1,6 +1,7 @@
 IntroRubySession4::Application.routes.draw do
   root :to => "pages#home"
   match 'about' => 'pages#about'
+  match 'register' => 'users#new'
 
   resources :users
 
