@@ -1,4 +1,9 @@
 IntroRubySession4::Application.routes.draw do
+  
+  match '/signin', to:'sessions#new'
+  match '/signout', to:'sessions#destry'
+  resources :sessions, only: [:new, :create, :destroy]
+
   root :to => "pages#home"
   match 'about' => 'pages#about'
   match 'register' => 'users#new'
